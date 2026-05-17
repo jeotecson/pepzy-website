@@ -1,0 +1,137 @@
+:root {
+  --bg-color: #f8f9fa;
+  --text-dark: #111827;
+  --text-light: #4b5563;
+  --accent: #000000;
+  --accent-hover: #374151;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.8);
+  --glass-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.04);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-dark);
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1.2rem 5%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  z-index: 10;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  background: rgba(248,249,250,0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.logo img { height: 35px; width: auto; object-fit: contain; }
+
+.wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 7rem 5% 5rem;
+}
+
+.card {
+  background: white;
+  border-radius: 24px;
+  padding: 2.2rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.badge .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 6px rgba(0,0,0,0.05);
+}
+
+h1 {
+  font-size: 2.25rem;
+  letter-spacing: -1px;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+p {
+  color: var(--text-light);
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.order-id {
+  display: inline-block;
+  margin: 0.6rem 0 1.2rem;
+  padding: 0.55rem 0.95rem;
+  background: rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 14px;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+  color: #000;
+}
+
+.actions {
+  margin-top: 1.8rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.95rem 1.4rem;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn:hover { background: var(--accent-hover); transform: translateY(-2px); }
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn-outline:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+@media (max-width: 520px) {
+  h1 { font-size: 1.8rem; }
+  .card { padding: 1.6rem; }
+}
+
